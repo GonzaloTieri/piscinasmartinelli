@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Site made with Mobirise Website Builder v4.10.7, https://mobirise.com -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="Mobirise v4.10.7, mobirise.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+    <meta name="description" content="">
+
+    <title>Home</title>
+    <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
+    <link rel="stylesheet" href="assets/tether/tether.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="assets/dropdown/css/style.css">
+    <link rel="stylesheet" href="assets/socicon/css/styles.css">
+    <link rel="stylesheet" href="assets/theme/css/style.css">
+    <link rel="stylesheet" href="assets/gallery/style.css">
+    <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+    <link rel="stylesheet" href="assets/custoncss/custom.css" type="text/css">
+
+
+
+</head>
+
+<body>
+<section class="menu cid-qTkzRZLJNu" once="menu" id="menu1-0">
+    <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+        <div class="menu-logo">
+            <div class="navbar-brand">
+                <span class="navbar-logo">
+                    <a href="https://mobirise.com">
+                        <img src="assets/images/logo.png" alt="Mobirise" title="" style="height: 4.5rem;">
+                    </a>
+                </span>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item">
+                    <a class="nav-link link text-white display-4" href="/">
+                        <span class="mbri-home mbr-iconfont mbr-iconfont-btn"></span>
+                        Inicio
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link text-white display-4" href="#servicios">
+                        <span class="mbri-hot-cup mbr-iconfont mbr-iconfont-btn"></span>
+                        Servicios
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link text-white display-4" href="file:///C:/Users/GTieri/Documents/MobirisePiscinas/galeria.html">
+                        <span class="mbri-photos mbr-iconfont mbr-iconfont-btn"></span>
+                        Diseños
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link text-white display-4" href="#form1-8">
+                        <span class="mbri-letter mbr-iconfont mbr-iconfont-btn"></span>
+                        Contactanos
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</section>
+
+<section class="mbr-section content4 title-desing-section" id="content4-v">
+    <div class="container">
+        <div class="row">
+            <div class="title col-12 col-md-8">
+                <h2 class="display-2">
+                    Albumes
+                </h2>
+            </div>
+            <div class="title col-12 col-md-4 align-right">
+                    <button type="button" class="btn btn-outline-primary btn-sm btn-block m-1 "> + Crear álbum</button>
+                </div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-gallery mbr-slider-carousel cid-rPQeP4snba" id="gallery1-u">
+    <div class="container">
+        <div class="row" >
+            {% for galery in galeries %}
+            <a href="galeria/{{galery.getId()}}" class="col-md-3 mbr-gallery-item mbr-gallery-item--p1">
+                <div>
+                    <img src="assets/images/portadasGalerias/{{ galery.getUrlFotoPortada()}}" >
+                    <span class="mbr-gallery-title mbr-fonts-style display-7">{{ galery.getNombreGaleria() }}</span>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+    <section class="cid-qTkAaeaxX5" id="footer1-2">
+
+
+
+
+
+
+    <script src="assets/web/assets/jquery/jquery.min.js"></script>
+    <script src="assets/popper/popper.min.js"></script>
+    <!-- script src="assets/tether/tether.min.js"></script -->
+    <!-- script src="assets/bootstrap/js/bootstrap.min.js"></script -->
+    <!-- script src="assets/smoothscroll/smooth-scroll.js"></script -->
+    <!-- script src="assets/dropdown/js/nav-dropdown.js"></script -->
+    <!-- script src="assets/dropdown/js/navbar-dropdown.js"></script -->
+    <!-- script src="assets/touchswipe/jquery.touch-swipe.min.js"></script -->
+    <script src="assets/masonry/masonry.pkgd.min.js"></script>
+    <script src="assets/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <!-- script src="assets/bootstrapcarouselswipe/bootstrap-carousel-swipe.js"></script -->
+    <!-- script src="assets/vimeoplayer/jquery.mb.vimeo_player.js"></script -->
+    <!-- script src="assets/parallax/jarallax.min.js"></script -->
+    <!-- script src="assets/ytplayer/jquery.mb.ytplayer.min.js"></script -->
+    <!-- script src="assets/theme/js/script.js"></script -->
+    <!-- script src="assets/slidervideo/script.js"></script -->
+    <!-- script src="assets/gallery/player.min.js"></script-->
+    <!-- script src="assets/gallery/script.js"></script -->
+    <!-- script src="assets/formoid/formoid.min.js"></script -->
+
+
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+#fijado {
+    position: fixed;
+    right: 25px;
+    bottom: 18px;
+    z-index: 9999;
+}
+
+.mbr-gallery.cid-rPQeP4snba {
+    padding-top: 40px !important;
+}
+
+.title-desing-section {
+    padding-top: 180px;
+    /*padding-bottom: 30px;*/
+    background-color: #ffffff;
+  }
+  .title-desing-section .line {
+    background-color: #149dcc;
+    color: #149dcc;
+    align: center;
+    height: 2px;
+    margin: 0 auto;
+  }
+  .title-desing-section .section-text {
+    padding: 2rem 0;
+  }
+  .title-desing-section .inner-container {
+    margin: 0 auto;
+  }
+  @media (max-width: 768px) {
+    .title-desing-section .inner-container {
+      width: 100% !important;
+    }
+  }
+
+  /***  Admin CSS ****/
+
+  /*-------
+
+   Gallery
+
+-------*/
+.mbr-gallery .mbr-gallery-admin-item {
+  position: relative;
+  display: inline-block;
+  width: 25%;
+}
+
+@media (max-width: 768px) {
+  .mbr-gallery .mbr-gallery-admin-item {
+    width: 50%; } }
+@media (max-width: 400px) {
+  .mbr-gallery .mbr-gallery-admin-item {
+    width: 100%; } }
+.mbr-gallery .icon-focus,
+.mbr-gallery .icon-video {
+  position: absolute;
+  top: calc(50% - 32px);
+  left: calc(50% - 24px);
+  font-family: 'MobiriseIcons' !important;
+  font-size: 3rem !important;
+  color: #fff;
+  opacity: 0;
+  transition: .2s opacity ease-in-out;
+  z-index: 5; }
+
+.mbr-gallery .icon-focus::before {
+  content: '\e96b'; }
+
+.mbr-gallery .icon-video::before {
+  content: '\e95c'; }
+
+.mbr-gallery .mbr-gallery-admin-item > div:hover .icon-focus,
+.mbr-gallery .mbr-gallery-admin-item > div:hover .icon-video {
+  /* opacity: 1; } */
+}
+.mbr-gallery .mbr-gallery-admin-item img {
+  width: 100%;
+  
+  /* opacity: 1;
+  -webkit-transition: .2s opacity ease-in-out;
+  transition: .2s opacity ease-in-out;  */
+}
+
+.mbr-gallery .mbr-gallery-admin-item > div:hover img {
+  /* opacity: 1;  */
+}
+
+.mbr-gallery .mbr-gallery-admin-item > div {
+  background: #fff;
+  display: block;
+  outline: none;
+  position: relative; }
+
+.mbr-gallery .mbr-gallery-admin-item .icon {
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -webkit-transition: .2s opacity ease-in-out;
+  color: #000;
+  font-size: 30px;
+  height: 69px;
+  left: 50%;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  transition: .2s opacity ease-in-out;
+  width: 69px; }
+
+.mbr-gallery .mbr-gallery-admin-item .icon::after,
+.mbr-gallery .mbr-gallery-admin-item .icon::before {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 69px;
+  width: 1px;
+  margin-left: 34.5px;
+  background-color: #fff; }
+
+.mbr-gallery .mbr-gallery-admin-item .icon::after {
+  width: 69px;
+  height: 1px;
+  margin-left: 0;
+  margin-top: 34.5px; }
+
+.mbr-gallery .mbr-gallery-admin-item > div:hover .icon {
+  opacity: 1; }
+
+.mbr-gallery .mbr-gallery-admin-item > div:hover::before {
+  opacity: .9; }
+
+.mbr-gallery .mbr-gallery-admin-item > div:hover .mbr-gallery-title {
+  background: transparent !important; }
