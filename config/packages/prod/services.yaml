@@ -1,3 +1,4 @@
 # config/services.yaml
 parameters:
   base_path: '/'
+  foto_galeria_path: '%kernel.project_dir%/public/assets/images/'

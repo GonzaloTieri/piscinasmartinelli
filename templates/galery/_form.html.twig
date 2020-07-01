@@ -1,0 +1,16 @@
+{# {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button class="btn">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }} #}
+
+{{ form_start(form) }}
+    {# <div class="row"> #}
+        <div class="form-group">
+            {{ form_row(form.nombre_galeria) }}
+        </div>
+        <div class="form-group" id="some-custom-id">
+            {{ form_row(form.foto) }}
+        </div>
+        <button class="btn btn-primary btn-xs  ">{{ button_label|default('Guardar') }}</button>
+    {# </div> #}
+{{ form_end(form) }}

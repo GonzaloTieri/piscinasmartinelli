@@ -1,0 +1,14 @@
+{# {{ form_start(form) }}
+    {{ form_widget(form) }}
+    
+    <button class="btn">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }} #}
+
+{{ form_start(form) }}
+    {# <div class="row"> #}
+        <div class="form-group" id="foto-id">
+            {{ form_widget(form.foto) }}
+        </div>
+        <button class="btn btn-primary btn-xs  ">{{ button_label|default('Guardar') }}</button>
+    {# </div> #}
+{{ form_end(form) }}

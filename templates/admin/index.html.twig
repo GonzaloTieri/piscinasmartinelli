@@ -86,7 +86,7 @@
                 </h2>
             </div>
             <div class="title col-12 col-md-4 align-right">
-                    <button type="button" class="btn btn-outline-primary btn-sm btn-block m-1 "> + Crear álbum</button>
+                    <a href="/galery/new" class="btn btn-outline-primary btn-sm btn-block m-1 "> + Crear álbum</a>
                 </div>
         </div>
     </div>
@@ -96,7 +96,7 @@
     <div class="container">
         <div class="row" >
             {% for galery in galeries %}
-            <a href="galeria/{{galery.getId()}}" class="col-md-3 mbr-gallery-item mbr-gallery-item--p1">
+            <a href="/admin/galeria/{{galery.getId()}}" class="col-md-3 mbr-gallery-item mbr-gallery-item--p1">
                 <div>
                     <img src="assets/images/portadasGalerias/{{ galery.getUrlFotoPortada()}}" >
                     <span class="mbr-gallery-title mbr-fonts-style display-7">{{ galery.getNombreGaleria() }}</span>
