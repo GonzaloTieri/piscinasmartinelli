@@ -656,7 +656,7 @@ input[type="range"] {
 
 .modal-dialog .carousel-inner {
   height: 100%;
-  height: -webkit-fill-available;
+  /* height: -webkit-fill-available; */
   height: fill-available;
 }
 
