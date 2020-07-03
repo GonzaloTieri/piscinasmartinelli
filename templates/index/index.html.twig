@@ -26,55 +26,7 @@
 </head>
 <body>
 
-  <section class="menu cid-qTkzRZLJNu" once="menu" id="menu1-0">
-    <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </button>
-        <div class="menu-logo">
-            <div class="navbar-brand">
-                <span class="navbar-logo">
-                    <a href="https://mobirise.com">
-                         <img src="{{ROOT_PATH}}assets/images/logo.png" alt="Mobirise" title="" style="height: 4.5rem;">
-                    </a>
-                </span>
-                
-            </div>
-        </div>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item">
-                    <a class="nav-link link text-white display-4" href="/">
-                        <span class="mbri-home mbr-iconfont mbr-iconfont-btn"></span>
-                        Inicio
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link link text-white display-4" href="/#servicios">
-                        <span class="mbri-hot-cup mbr-iconfont mbr-iconfont-btn"></span>
-                        Servicios
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link link text-white display-4" href="/galeria">
-                        <span class="mbri-photos mbr-iconfont mbr-iconfont-btn"></span>
-                        Diseños
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link link text-white display-4" href="/#form1-8">
-                        <span class="mbri-letter mbr-iconfont mbr-iconfont-btn"></span>
-                        Contactanos
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</section>
+{{ include('menu.html.twig') }}
 
 <section class="carousel slide cid-rAsNboUOC7" data-interval="false" id="slider1-6">
     <div class="full-screen">
@@ -303,73 +255,7 @@
     </div>
 </section>
 
-<section class="cid-qTkAaeaxX5" id="footer1-2">
-
-    
-
-    
-
-    <div class="container">
-        <div class="media-container-row content text-white">
-            <div class="col-12 col-md-4">
-                <div class="media-wrap">
-                    <a href="/">
-                        <img src="assets/images/logo-192x60.png" alt="Mobirise" title="" width="260px">
-                    </a>
-                </div>
-            </div>
-            <div class="col-12 col-md-4 mbr-fonts-style display-7">
-                <h5 class="pb-3">
-                    Contacto</h5>
-                <p class="mbr-text">
-                    Email: contacto@piscinasmartinelli.com.ar
-                    <br>Cel: 341-5841210 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                    <br>Cel: 341-2815146 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br><br></p>
-            </div>
-            <div class="col-12 col-md-4 mbr-fonts-style display-7">
-                <h5 class="pb-3">
-                    Links
-                </h5>
-                <p class="mbr-text"><a href="www.facebook.com">Facebook</a> <br> <a href="www.instagram.com">Instagram</a></p>
-            </div>
-        </div>
-        <div id="fijado"> 
-            <a href="https://wa.me/5493412815146?&text=Hola!%20quiero%20consultar%20por" target="_blank">
-                <img src="{{ asset('/assets/images/chatwhatsapp.png') }}" class="img-responsive">
-            </a>
-        </div>
-
-        <div class="footer-lower">
-            <div class="media-container-row">
-                <div class="col-sm-12">
-                    <hr>
-                </div>
-            </div>
-            <div class="media-container-row mbr-white">
-                <div class="col-sm-6 copyright">
-                    <p class="mbr-text mbr-fonts-style display-7">
-                        © Copyright 2020 - Martinelli Piscinas - All Rights Reserved
-                    </p>
-                </div>
-                <div class="col-md-6">
-                    <div class="social-list align-right">
-                        <div class="soc-item">
-                            <a href="https://www.facebook.com/pages/Mobirise/1616226671953247" target="_blank">
-                                <span class="socicon-facebook socicon mbr-iconfont mbr-iconfont-social"></span>
-                            </a>
-                        </div>
-                        <div class="soc-item">
-                            <a href="https://instagram.com/mobirise" target="_blank">
-                                <span class="socicon-instagram socicon mbr-iconfont mbr-iconfont-social"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
+{{ include('footer.html.twig') }}
 
   <script src="{{ROOT_PATH}}assets/web/assets/jquery/jquery.min.js"></script>
   <script src="{{ROOT_PATH}}assets/popper/popper.min.js"></script>
