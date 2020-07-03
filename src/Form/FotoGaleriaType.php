@@ -17,7 +17,7 @@ class FotoGaleriaType extends AbstractType
         $builder
             //->add('nombre_foto')
             ->add('idGaleria', HiddenType::class)
-            ->add('foto', FileType::class, ['label' => 'Foto', 'mapped' => false ] )
+            ->add('foto', FileType::class, ['label' => 'Foto', 'mapped' => false, 'multiple'=>true ] )
             //->add('url_foto')
         ;
     }

@@ -34,40 +34,47 @@ class FotoGaleriaController extends AbstractController
      */
     public function new(Request $request, int $id, SluggerInterface $slugger): Response
     {
-        $fotoGalerium = new FotoGaleria();
-        $fotoGalerium->setIdGaleria($id);
-        $form = $this->createForm(FotoGaleriaType::class, $fotoGalerium);
+        $fotoGaleriumForm = new FotoGaleria();
+        $fotoGaleriumForm->setIdGaleria($id);
+        $form = $this->createForm(FotoGaleriaType::class, $fotoGaleriumForm);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $foto = $form->get('foto')->getData();
+            $fotoArray = $form->get('foto')->getData();
+            
 
-            $originalFilename = pathinfo($foto->getClientOriginalName(), PATHINFO_FILENAME);
-            
-            $safeFilename = $slugger->slug($originalFilename);
-            $newFilename = 'GONZALO'.$safeFilename.'-'.uniqid().'.'.$foto->guessExtension();
-            
-            try {
-                $foto->move(
-                    $this->getParameter('foto_galeria_path')."/{$id}" ,
-                    $newFilename
-                );
-            } catch (FileException $e) {
-                throw $e;
-                // ... handle exception if something happens during file upload
+
+            foreach( $fotoArray as $foto ){
+                $fotoGalerium = new FotoGaleria();
+                $fotoGalerium->setIdGaleria($id);
+                $originalFilename = pathinfo($foto->getClientOriginalName(), PATHINFO_FILENAME);
+                
+                $safeFilename = $slugger->slug($originalFilename);
+                $newFilename = $safeFilename.'-'.uniqid().'.'.$foto->guessExtension();
+                
+                try {
+                    $foto->move(
+                        $this->getParameter('foto_galeria_path')."/{$id}" ,
+                        $newFilename
+                    );
+                } catch (FileException $e) {
+                    throw $e;
+                    // ... handle exception if something happens during file upload
+                }
+
+                $fotoGalerium->setNombreFoto($newFilename);
+                $fotoGalerium->setUrlFoto($newFilename);
+                $entityManager = $this->getDoctrine()->getManager();
+                $entityManager->persist($fotoGalerium);
+                $entityManager->flush();
             }
-
-            $fotoGalerium->setNombreFoto($newFilename);
-            $fotoGalerium->setUrlFoto($newFilename);
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($fotoGalerium);
-            $entityManager->flush();
+            
 
             return $this->redirectToRoute('admin_galeria', array('id'=>$id));
         }
 
         return $this->render('foto_galeria/new.html.twig', [
-            'foto_galerium' => $fotoGalerium,
+            'foto_galerium' => $fotoGaleriumForm,
             'form' => $form->createView(),
         ]);
     }
